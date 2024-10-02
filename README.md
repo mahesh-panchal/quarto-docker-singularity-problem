@@ -1,5 +1,7 @@
 # Problem with Quarto in Singularity but not Docker
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/mahesh-panchal/quarto-docker-singularity-problem)
+
 The containers install quarto with the same environment in the same way, but in singularity, `deno` fails to be found, unlike docker.
 
 ```bash
