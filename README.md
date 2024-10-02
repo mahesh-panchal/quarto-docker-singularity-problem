@@ -23,3 +23,11 @@ nextflow run main.nf -profile singularitySingularityImg
 # Works
 pixi run nextflow run main.nf
 ```
+
+## Container creation logs
+
+Docker
+: https://wave.seqera.io/view/builds/a0afd98904fa925c_1
+
+Singularity
+: https://wave.seqera.io/view/builds/7ec20cda78dea241_1
