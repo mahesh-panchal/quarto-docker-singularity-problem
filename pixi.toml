@@ -1,0 +1,20 @@
+[project]
+authors = ["Mahesh Binzer-Panchal <mahesh.binzer-panchal@nbis.se>"]
+channels = ["conda-forge", "bioconda"]
+description = "Demonstrate a curious reproducibility issue between docker and singularity"
+name = "quarto-docker-singularity-problem"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+quarto = { version = "1.5.57.*", channel = "conda-forge" }
+pip = "*"
+
+[pypi-dependencies]
+jupyter = "==1.1.1"
+multiqc = "==1.25.1"
+pandas = "==2.2.3"
+papermill = "==2.6.0"
+tabulate = "==0.9.0"
