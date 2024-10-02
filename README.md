@@ -31,3 +31,18 @@ Docker
 
 Singularity
 : https://wave.seqera.io/view/builds/7ec20cda78dea241_1
+
+## The (unsatisfactory) fix
+
+In your script add:
+```bash
+    # Fix Quarto for apptainer
+    ENV_QUARTO="\${ENV_QUARTO:-/opt/conda/etc/conda/activate.d/quarto.sh}"
+    set +u
+    if [ -z "\${QUARTO_DENO}" ] && [ -f "\${ENV_QUARTO}" ]; then
+        source "\${ENV_QUARTO}"
+    fi
+    set -u
+```
+
+The solution for this comes from https://github.com/quarto-dev/quarto-cli/discussions/2559#discussioncomment-9882629
